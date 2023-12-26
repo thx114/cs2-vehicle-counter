@@ -2,7 +2,7 @@
 schemaVersion = "0.0.1"
 
 [package]
-namespace = "F_thx"
+namespace = "MioMod"
 name = "I18nCN"
 versionNumber = "1.2.7"
 description = "Translate the mod, translate all mods into Chinese "
