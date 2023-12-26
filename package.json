@@ -1,6 +1,6 @@
 {
   "name": "mio-i18n-cn",
-  "version": "1.2.8",
+  "version": "1.2.10",
   "description": "都市天际线2汉化模组",
   "main": "index.js",
   "scripts": {
