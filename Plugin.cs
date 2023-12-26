@@ -1,37 +1,38 @@
-﻿using System.Linq;
-using System.Reflection;
-using BepInEx;
+﻿using BepInEx;
 using HarmonyLib;
 using HookUILib.Core;
-using UnityEngine;
+
 
 #if BEPINEX_V6
     using BepInEx.Unity.Mono;
 #endif
-
-namespace VehicleCounter {
-    [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+public static class mioPLUGIN
+{
+    public const string PLUGIN_GUID = "mio-i18n-cn";
+    public const string PLUGIN_NAME = "I18nCN";
+    public const string PLUGIN_VERSION = "1.2.6.2";
+}
+namespace I18nCN
+{
+    [BepInPlugin(mioPLUGIN.PLUGIN_GUID, mioPLUGIN.PLUGIN_NAME, mioPLUGIN.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin {
         private void Awake() {
-            Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
-            var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
-            var patchedMethods = harmony.GetPatchedMethods().ToArray();
+            var harmony = new Harmony(mioPLUGIN.PLUGIN_NAME);
 
-            Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} made patches! Patched methods: " + patchedMethods.Length);
+            harmony.PatchAll();
+            Logger.LogInfo($"Plugin {mioPLUGIN.PLUGIN_GUID} is loaded!");
 
-            foreach (var patchedMethod in patchedMethods) {
-                Logger.LogInfo($"Patched method: {patchedMethod.Module.Name}:{patchedMethod.Name}");
-            }
         }
     }
-    public class VehicleCounterUI : UIExtension {
-        public new readonly string extensionID = "example.vehicle_counter";
+    public class PluginUI : UIExtension {
+        public new readonly string extensionID = "mio.I18nCN";
         public new readonly string extensionContent;
         public new readonly ExtensionType extensionType = ExtensionType.Panel;
 
-        public VehicleCounterUI() {
-            this.extensionContent = this.LoadEmbeddedResource("VehicleCounter.dist.bundle.js");
+        public PluginUI() {
+            this.extensionContent = this.LoadEmbeddedResource("I18nCN.dist.bundle.js");
         }
     }
 }
+

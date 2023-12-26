@@ -1,13 +1,13 @@
 {
-  "name": "cs2-vehicle-counter",
-  "version": "1.0.0",
-  "description": "This repository template allows you to get started with Cities: Skylines 2 modding easily, all the way to building your mod on commit with GitHub Actions and publishing your mod automatically on Thunderstore.",
+  "name": "mio-i18n-cn",
+  "version": "1.2.6.2",
+  "description": "都市天际线2汉化模组",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Captain-of-Coit",
+  "author": "F_thx",
   "license": "MIT",
   "devDependencies": {
     "esbuild": "^0.19.8",
