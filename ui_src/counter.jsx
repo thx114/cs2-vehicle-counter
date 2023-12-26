@@ -278,7 +278,7 @@ function replaceContent() {
         const REPLACE_ITEM_NEW = {
             main: RE(
                 [MAIN.主界面.版本], {
-                '1.0.18f1': '1.0.18F1 您已启用 都市:天际线2 全局汉化v1.2.7'
+                '1.0.18f1': '1.0.18F1 您已启用 都市:天际线2 全局汉化v1.2.8'
             }
             ),
             开发者模式_模拟: RE(
