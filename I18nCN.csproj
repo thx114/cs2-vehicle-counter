@@ -4,7 +4,7 @@
 		<AssemblyName>I18nCN</AssemblyName>
 		<RootNamespace>I18nCN</RootNamespace>
 		<Description>汉化模组</Description>
-		<Version>1.2.6.2</Version>
+		<Version>1.2.7</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RestoreAdditionalProjectSources>
