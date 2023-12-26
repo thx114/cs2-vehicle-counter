@@ -17,9 +17,9 @@ jobs:
       - name: Checkout libcs2
         uses: actions/checkout@v3
         with:
-          repository: Captain-Of-Coit/libcs2
+          repository: thx114/csl2
           token: ${{ secrets.GH_PAT }}
-          path: libcs2/
+          path: csl2/
       - name: Install .NET Core
         uses: actions/setup-dotnet@v3
         with:
