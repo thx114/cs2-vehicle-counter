@@ -989,7 +989,8 @@ function replaceContent() {
             },
                 [rif().class('panel_YqS').index(1).first.all.first.haveStyle('flex: 1.000000')], {
                 'Unemployed': '失业',
-                'Homeless Households': '无家可归的家庭'
+                'Under Employed': '低收入就业',
+                'Homeless Households': '无家可归家庭'
             },
                 [rif().class('panel_YqS').index(1).index(1).all.first.haveStyle('font-weight')], {
                 'TO': '总',
@@ -1184,10 +1185,10 @@ function replaceContent() {
             }
             ),
             传统风味: RE(
-                [传统风味.顶栏, HOOKUI.顶栏.名称], {
+                [HOOKUI.顶栏.名称], {
                 'Legacy Flavour': '传统风味'
             },
-                [传统风味.TAB], {
+                [传统风味.TAB], {//
                 'Zone Settings': '功能区设置',
                 'Settings': '设置',
                 'Zone Colours': '功能区颜色',
@@ -1201,7 +1202,7 @@ function replaceContent() {
                 'Menu': '菜单',
                 'Other': '其他'
             },
-                [传统风味.标题], {
+                [传统风味.标题], {//
                 'Use Sticky Whiteness': '持久信息视图白色',
                 'Whiteness Toggle': '信息视图白色切换',
                 'Use Units': '使用 U 长度单位',
@@ -1224,10 +1225,10 @@ function replaceContent() {
 
                 'Industrial': '工业'
             },
-                [传统风味.标题2], {
+                [传统风味.标题2], {//
                 'Make window transparent': '使窗口透明',
             },
-                [传统风味.描述], {
+                [传统风味.描述], {//
                 'Override the games white info-mode switch, using a custom setting. Toggle with ALT+S.':
                     '覆盖游戏的白色信息模式切换，使用自定义设置 -快捷键: ALT+S',
 
@@ -1259,7 +1260,7 @@ function replaceContent() {
                 'This mod was developed by the optimus-code and the Cities2Modding community.': '此模组由optimus-code和Cities2Modding社区开发。',
                 'Modify Industrial zone colours': '修改工业区颜色'
             },
-                [传统风味.选项], {
+                [传统风味.选项], {//
                 'Off': '关闭',
                 'Day': '白天',
                 'Golden Hour': '黄金时段',
@@ -1269,7 +1270,7 @@ function replaceContent() {
                 'Rain': '雨天',
                 'Snow': '雪天'
             },
-                [传统风味.按钮], {
+                [传统风味.按钮], {//
                 'Reset to default': '重置至默认',
                 'Set': '设置',
                 'to vanilla colours': '到原版颜色',
@@ -1277,7 +1278,7 @@ function replaceContent() {
                 'Game restart required': '需要重新启动游戏',
                 'Reset': '重置'
             },
-                [MAIN.下拉框.值, MAIN.下拉框.标签, 传统风味.按钮], {
+                [MAIN.下拉框.值, MAIN.下拉框.标签, 传统风味.按钮], {//
                 'Default Colours': '默认颜色',
                 'Deuteranopia': '绿色盲',
                 'Protanopia': '红色盲',
@@ -1296,7 +1297,7 @@ function replaceContent() {
                 'LF - Cool Blue': 'LF - 冷蓝',
                 'LF - Dark Teal': 'LF - 深青'
             },
-                [传统风味.标签], {
+                [传统风味.标签], {//
                 'Residential Low': '低密度住宅',
                 'Residential Medium': '中密度住宅',
                 'Residential Medium Row': '中密度联排住宅',
@@ -1556,8 +1557,6 @@ function replaceContent() {
                     '-启用此选项可大幅提高在使用大型对象刷子(≥2500大小)时的性能，通过在悬停时临时将刷子强度设置为0  警告：禁用此选项将使具有高强度的大型对象刷子非常卡顿。  如果存在兼容性问题，请禁用',
             }
             )
-
-
         }
 
         for (const [ObjName, ObjReItems] of Object.entries(REPLACE_ITEM_NEW)) {
@@ -1574,7 +1573,6 @@ function replaceContent() {
             infoDiv.innerHTML = `全局汉化: ${window.__LOGGING__} 段字符 , 耗时 ${time2 - time1} ms ${addinfo}`
             infoDiv.id = 'I18loginfo'
             infoDiv.style.fontFamily = "Noto Sans SC"
-            // 在指定<div>的后面插入新的<div>
             targetDiv.appendChild(infoDiv);
         } else {
             document.getElementById('I18loginfo').innerHTML = `全局汉化: ${window.__LOGGING__} 段字符 , 耗时 ${time2 - time1} ms`

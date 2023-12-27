@@ -4,9 +4,9 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "MioMods"
 name = "I18nCN"
-versionNumber = "1.2.92"
-description = "Translate the mod, translate all mods into Chinese "
-websiteUrl = "https://thunderstore.io"
+versionNumber = "1.3.0"
+description = "translate all mods into Chinese "
+websiteUrl = "https://github.com/thx114/mio-i18-cn"
 containsNsfwContent = false
 
 [package.dependencies]

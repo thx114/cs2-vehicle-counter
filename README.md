@@ -26,6 +26,7 @@
 * 建筑尺寸自定义 Zone Spawn Custom
 * 地图纹理替换 Map Texture Replacer
 * 全部区块解锁 529 Tiles  
+* 无限刷子尺寸 Brush Size Unlimiter
 更多汉化添加中...  
 
 ## 使用方法​  
