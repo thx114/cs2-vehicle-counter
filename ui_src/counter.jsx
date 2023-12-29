@@ -925,8 +925,8 @@ function replaceContent() {
                 'Education': '教育',
                 'Uneducated': '无学历',
                 'Poorly Educated': '低学历',
-                'Highly Educated': '高学历',
-                'Well Educated': '极高学历',
+                'Highly Educated': '极高学历',
+                'Well Educated': '高学历',
                 'Educated': '普通学历',
                 'TOTAL': '总计'
             },
