@@ -271,11 +271,6 @@ function replaceContent() {
             标签: rif({ match: 'inc' }).class('panel_YqS.economy-panel_e08').class('content_XD5.content_AD7.child-opacity-transition_nkS').class('field_amr.field_cjf').first
         }
         const REPLACE_ITEM_NEW = {
-            main: RE(
-                [MAIN.主界面.版本], {
-                '1.0.18f1': '1.0.18F1 您已启用 都市:天际线2 全局汉化v1.2.8'
-            }
-            ),
             开发者模式_模拟: RE(
                 [开发者模式.内容.标签], {
                 'Active tool': '激活工具',
