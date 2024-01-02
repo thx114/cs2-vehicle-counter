@@ -699,7 +699,6 @@ function replaceContent() {
                 [开发者模式.内容.标签], {
                 'Physical Objects': '物理对象',
                 'Marker Objects': '标记对象',
-                'Draw Pivots': '绘制枢轴',
                 'Interpolated Positions': '插值位置',
                 'Net Connections': '网络连接',
                 'Group Connections': '组连接',
@@ -730,7 +729,6 @@ function replaceContent() {
                 'Map Tiles': '地图瓦片',
                 'Spaces': '空间',
                 'Surfaces': '表面',
-                'Routes': '路径',
                 'Lane Connections': '车道连接',
                 'Humans': '人类',
                 'Animals': '动物',
@@ -1480,17 +1478,22 @@ function replaceContent() {
                 'Show Tooltip': '显示工具提示框',
                 'Flaming Chirper': '燃烧小鸟',
                 'Tool Icon': '工具图标',
-                'Reset Anarchy Settings': '重置 无碰撞模组 设置'
-            },
+                    'Prevent Accidental Prop Culling': '防止意外的道具遗失',
+                    'Prop Refresh Frequency': '道具刷新频率',
+                    },
                 [MAIN.设置.描述], {
                 'With this option enabled the Bulldoze Tool will always have anarchy enabled.': '启用此选项后，清障工具将始终启用无碰撞状态。',
                 'With this option enabled a tooltip with Ⓐ will be shown when Anarchy is active for appropriate tools.': '启用此选项后，对适当的工具启用无碰撞时将显示带有Ⓐ的工具提示。',
                 'With this option enabled the Chirper will be on fire when Anarchy is active for appropriate tools. Image Credit: Bad Peanut.': '微谈小鸟 将着火。 图片来源：Bad Peanut。  ',
                 'With this option enabled a icon row with a single button for Anarchy will show up when using appropriate tools.': '启用此选项后，使用适当的工具时将显示一个包含单个无碰撞按  钮的图标显示。',
-                'Upon confirmation this will reset the settings for Anarchy mod.': '确认后，这将重置 无碰撞模组 的设置。'
+                 'Upon confirmation this will reset the settings for Anarchy mod.': '确认后，这将重置 无碰撞模组 的设置。',
+                 'This will routinely trigger a graphical refresh to props placed with Anarchy that have been culled to prevent accidental culling of props. This affects performance.': '这将定期触发对使用 无碰撞 放置的被剔除的道具进行图形刷新，以防止意外的道具遗失。这会影响性能。',
+                 'This is the number of frames between graphical refreshes to props placed with Anarchy to prevent accidental culling. Higher numbers will have better performance, but longer possible time that props may be missing.': '这是在 Anarchy 下放置的道具之间的图形刷新之间的帧数，以防止意外的剔除。数字越大，性能越好，但可能遗失道具的时间越长。',
+                  "If props placed with Anarchy have been accidently culled, you can press this button to bring them back now. This doesn't negatively effect performance.": '如果使用 无碰撞 放置的道具被意外剔除，您可以按下此按钮立即将它们恢复。这不会对性能产生负面影响。'
             },
-                [MAIN.按钮], {
-                'Reset Anarchy Settings': '重置 无碰撞模组 设置'
+                [MAIN.按钮, MAIN.设置.标题], {
+                    'Reset Anarchy Settings': '重置 无碰撞模组 设置',
+                    'Refresh Props': '刷新道具',
             }
             ),
             建筑尺寸自定义: RE(
