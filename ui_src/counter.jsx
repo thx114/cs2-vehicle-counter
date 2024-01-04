@@ -215,7 +215,8 @@ function replaceContent() {
                 提示: rif().class('tooltip-fade-in S9n')
             },
             工具框: {
-                标签: rif().class('tool-options-panel_Se6').class('label_RZX')
+                标签: rif().class('tool-options-panel_Se6').class('label_RZX'),
+                值: rif().class('tool-options-panel_Se6').class('number-field__Hd')
             },
             设置: {
                 选项: rif().class('menu_hb1.child-opacity-transition_nkS').class('item_pq7.primary_Q54').first,
@@ -1488,13 +1489,20 @@ function replaceContent() {
                 'With this option enabled a icon row with a single button for Anarchy will show up when using appropriate tools.': '启用此选项后，使用适当的工具时将显示一个包含单个无碰撞按  钮的图标显示。',
                  'Upon confirmation this will reset the settings for Anarchy mod.': '确认后，这将重置 无碰撞模组 的设置。',
                  'This will routinely trigger a graphical refresh to props placed with Anarchy that have been culled to prevent accidental culling of props. This affects performance.': '这将定期触发对使用 无碰撞 放置的被剔除的道具进行图形刷新，以防止意外的道具遗失。这会影响性能。',
-                 'This is the number of frames between graphical refreshes to props placed with Anarchy to prevent accidental culling. Higher numbers will have better performance, but longer possible time that props may be missing.': '这是在 Anarchy 下放置的道具之间的图形刷新之间的帧数，以防止意外的剔除。数字越大，性能越好，但可能遗失道具的时间越长。',
-                  "If props placed with Anarchy have been accidently culled, you can press this button to bring them back now. This doesn't negatively effect performance.": '如果使用 无碰撞 放置的道具被意外剔除，您可以按下此按钮立即将它们恢复。这不会对性能产生负面影响。'
+                 'This is number of frames between graphical refreshes to props placed with Anarchy to prevent accidental culling. Higher numbers will have better performance, but longer possible time that props may be missing.': '这是在 Anarchy 下放置的道具之间的图形刷新之间的帧数，以防止意外的剔除。数字越大，性能越好，但可能遗失道具的时间越长。',
+                 "If props placed with Anarchy have been accidently culled, you can press this button to bring them back now. This doesn't negatively effect performance.": '如果使用 无碰撞 放置的道具被意外剔除，您可以按下此按钮立即将它们恢复。这不会对性能产生负面影响。'
             },
                 [MAIN.按钮, MAIN.设置.标题], {
                     'Reset Anarchy Settings': '重置 无碰撞模组 设置',
                     'Refresh Props': '刷新道具',
+            },
+                [MAIN.悬浮框.标题], {
+                    'Anarchy':'无碰撞'
+            },
+                [MAIN.悬浮框.内容], {
+                    "Disables error checks for tools and does not display errors. When applicable, you can place vegetation and props (with DevUI 'Add Object' menu) overlapping or inside the boundaries of other objects and close together.":'禁用工具错误检查，不显示错误。在适用的情况下，您可以将植被和道具（使用DevUI的“添加对象”菜单）放置在其他对象的边界重叠或内部并靠近一起。'
             }
+
             ),
             建筑尺寸自定义: RE(
                 [HOOKUI.面板.标题, HOOKUI.顶栏.名称], {
@@ -1554,6 +1562,39 @@ function replaceContent() {
                 'Warning: Disabling this will make large object brushes with high strengths extremely laggy.':
                     '-启用此选项可大幅提高在使用大型对象刷子(≥2500大小)时的性能，通过在悬停时临时将刷子强度设置为0  警告：禁用此选项将使具有高强度的大型对象刷子非常卡顿。  如果存在兼容性问题，请禁用',
             }
+            ),
+            额外景观工具: RE(
+                [MAIN.工具框.标签], {
+                    'Brush': '笔刷',
+                    'Brush Rotation': '笔刷角度'
+            },
+                [MAIN.工具框.值], {
+                    'Custom 01.png': '自定义 01',
+                    'Mountain 01.png': '山脉 01',
+                    'Mountain 02.png': '山脉 02',
+                    'Mountain 03.png': '山脉 03',
+                    'Default Brush': '默认',
+                    'Mountain02Brush': '山脉 02',
+                    'TriangleBrush': '三角',
+                    'Mountain01Brush': '山脉 01',
+                    'Mesa01Brush': '台地 01',
+                    'RectangleBrush': '矩形',
+                    'PeakBrush': '峰',
+                    'TendrilBrush01': '卷曲 01',
+                    'TendrilBrush02': '卷曲 02',
+                    'MountainsBrush': '山脉',
+                    'Mountain03Brush': '山脉 03',
+                    'Mountain04Brush': '山脉 04',
+                    'TendrilBrush03': '卷曲 03',
+                    'River01Brush': '河流 01'
+            },
+                [MAIN.工具栏.资产详情.标题], {
+                    'SubServices.NAME[Surfaces]':'地面'
+            },
+                [MAIN.工具栏.资产详情.描述], {
+                    'Assets.SUB_SERVICE_DESCRIPTION[Surfaces]':'一些地面/地表,无碰撞体积'
+
+                }
             )
         }
 
