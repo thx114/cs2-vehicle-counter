@@ -259,6 +259,8 @@ function replaceContent() {
                 标题: rif().class('title-bar_PF4').class('title_SVH.title_zQN'),
                 内容: rif().class('content_XD5.content_AD7.child-opacity-transition_nkS'),
                 标签: rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').class('label_DGc.label_ZLb'),
+                标签2: rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').class('row_S2v'),
+                标签_p: rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').class('row_S2v').all,
             }
         }
         const 传统风味 = {
@@ -888,19 +890,22 @@ function replaceContent() {
                 'InfoLoom: Workforce': '信息隐现: 劳动力结构',
                 'InfoLoom: Workplaces': '信息隐现: 工作场所',
                 'InfoLoom: Demand Factors': '信息隐现: 建筑需求',
+                    'InfoLoom: Commercial': '信息隐现: 商业',
             },
                 [HOOKUI.面板.标题], {
                 'Demographics': '人口统计',
                 'Demand': '需求',
                 'Workforce Structure': '劳动力结构',
-                'Workplace Distribution': '工作场所分布'
+                'Workplace Distribution': '工作场所分布',
+                'Commercial Data': '商业数据',
             },
                 [rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').class('row_S2v').isStyle('width: 60.000000%; justify-content: center; ')], {
                 'All Citizens': '所有市民',
                 '- Locals': '- 本地居民',
                 '- Tourists': '- 游客',
                 '- Commuters': '- 通勤者',
-                'Moving Away': '搬离中',
+                '- Moving Away': '- 搬离中',
+                'Population':'人口',
                 'Oldest citizen': '最年长市民',
                 'Students': '学生',
                 'Workers': '工人',
@@ -971,6 +976,44 @@ function replaceContent() {
                 'Warehouses': '仓库',
                 'PetrolDemand': '汽油需求',
                 'TouristDemand': '游客需求'
+            }, [HOOKUI.面板.标签2], {
+                'PROPERTYLESS COMPANIES': '破产公司',
+                'EMPTY BUILDINGS': '空置建筑',
+                'Standard': '标准',
+                'Educated': '受过教育的',
+                'Uneducated': '未受教育的',
+                    'No demand for:': '没有需求:',
+                    'conv.food':'方便食品',
+                'food': '食物',
+                'meals': '餐饮',
+                'paper': '纸张',
+                'furniture': '家具',
+                'vehicles': '车辆',
+                'lodging': '住宿',
+                'petrochemicals': '石油化工',
+                'plastics': '塑料',
+                'electronics': '电子产品',
+                'chemicals': '化学品',
+                'pharmaceuticals': '药品',
+                'beverages': '饮料',
+                'textiles': '纺织品',
+                'entertainment': '娱乐',
+                'recreation': '休闲'
+            },
+                [HOOKUI.面板.标签_p], {
+
+                'AVERAGE TAX RATE': '平均税率',
+                    '10% is the neutral rate': '正常为10%',
+                'SERVICE UTILIZATION': '服务利用率',
+                    '30% is the neutral ratio': '正常为30%',
+                'SALES CAPACITY': '销售能力',
+                    '100% when capacity = consumption': '当销售=消费时为100%',
+                'Employee capacity ratio': '员工容量',
+                    '75% is the neutral ratio': '正常为75%'
+
+            },
+                [rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').first.first.index(11).first], {
+                'AVAILABLE WORKFORCE': '可用劳动力'
             }
             ),
             失业监视器: RE(
