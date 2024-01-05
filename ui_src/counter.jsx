@@ -261,6 +261,9 @@ function replaceContent() {
                 标签: rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').class('label_DGc.label_ZLb'),
                 标签2: rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').class('row_S2v'),
                 标签_p: rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').class('row_S2v').all,
+                头: rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').class('header_Ld7'),
+                头描述: rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').class('header_MP_.header_8H_'),
+                项目: rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').class('header-content_SqG.header-content_wUX').all,
             }
         }
         const 传统风味 = {
@@ -890,14 +893,16 @@ function replaceContent() {
                 'InfoLoom: Workforce': '信息隐现: 劳动力结构',
                 'InfoLoom: Workplaces': '信息隐现: 工作场所',
                 'InfoLoom: Demand Factors': '信息隐现: 建筑需求',
-                    'InfoLoom: Commercial': '信息隐现: 商业',
+                    'InfoLoom: Commercial Data': '信息隐现: 商业信息',
+                    'InfoLoom: Residential Data':'信息隐现: 住宅数据'
             },
                 [HOOKUI.面板.标题], {
                 'Demographics': '人口统计',
                 'Demand': '需求',
                 'Workforce Structure': '劳动力结构',
                 'Workplace Distribution': '工作场所分布',
-                'Commercial Data': '商业数据',
+                    'Commercial Data': '商业数据',
+                'Residential Data': '住宅数据'
             },
                 [rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').class('row_S2v').isStyle('width: 60.000000%; justify-content: center; ')], {
                 'All Citizens': '所有市民',
@@ -998,18 +1003,39 @@ function replaceContent() {
                 'beverages': '饮料',
                 'textiles': '纺织品',
                 'entertainment': '娱乐',
-                'recreation': '休闲'
+                    'recreation': '休闲',
+                    'LOW': '低密度',
+                    'MEDIUM': '中密度',
+                    'HIGH': '高密度',
+                    
+                'Total properties': '总财产',
+                '- Occupied properties': '- 已占用财产',
+                '= Empty properties': '= 空财产',
+                "No demand at 10%": '无需求时为10%',
+                'BUILDING DEMAND': '建筑需求',
+                'STUDY POSITIONS': '学习位置',
+                'HOUSEHOLDS': '家庭'
+                    
+
             },
                 [HOOKUI.面板.标签_p], {
-
-                'AVERAGE TAX RATE': '平均税率',
+                    'AVERAGE TAX RATE': '平均税率',
                     '10% is the neutral rate': '正常为10%',
-                'SERVICE UTILIZATION': '服务利用率',
+                    'SERVICE UTILIZATION': '服务利用率',
                     '30% is the neutral ratio': '正常为30%',
-                'SALES CAPACITY': '销售能力',
+                    'SALES CAPACITY': '销售能力',
                     '100% when capacity = consumption': '当销售=消费时为100%',
-                'Employee capacity ratio': '员工容量',
-                    '75% is the neutral ratio': '正常为75%'
+                    'EMPLOYEE CAPACITY RATIO': '员工容量',
+                    '75% is the neutral ratio': '正常为75%',
+                    'HAPPINESS': '幸福度',
+                    '50 is neutral': '正常为50%',
+                    'UNEMPLOYMENT': '失业率',
+                    '10% is neutral': '正常为10%',
+                    'HOMELESS': '无家可归',
+                    '0 is neutral': '正常为0%',
+
+                    "TAX RATE (weighted)": '税率（加权）',
+                    '10 % is neutral': '正常为10%'
 
             },
                 [rif().class('content_XD5.content_AD7.child-opacity-transition_nkS').first.first.index(11).first], {
@@ -1540,11 +1566,24 @@ function replaceContent() {
                     'Refresh Props': '刷新道具',
             },
                 [MAIN.悬浮框.标题], {
-                    'Anarchy':'无碰撞'
+                    'Anarchy': '无碰撞',
+                    'Gameplay Manipulation': '游戏中操纵',
+                    'Bypass Confirmation': '绕过确认',
+                    'Target Markers': '标记',
+                    'Target Surfaces': '地面/表面'
             },
                 [MAIN.悬浮框.内容], {
-                    "Disables error checks for tools and does not display errors. When applicable, you can place vegetation and props (with DevUI 'Add Object' menu) overlapping or inside the boundaries of other objects and close together.":'禁用工具错误检查，不显示错误。在适用的情况下，您可以将植被和道具（使用DevUI的“添加对象”菜单）放置在其他对象的边界重叠或内部并靠近一起。'
-            }
+                    "Disables error checks for tools and does not display errors. When applicable, you can place vegetation and props (with DevUI 'Add Object' menu) overlapping or inside the boundaries of other objects and close together.":
+                        '禁用工具错误检查，不显示错误。在适用的情况下，您可以将植被和道具（使用DevUI的“添加对象”菜单）放置在其他对象的边界重叠或内部并靠近一起。',
+                    "Allows you to use the bulldozer on moving objects such as vehicles or cims.":
+                        '许在移动对象（如车辆或市民）上使用推土机。',
+                    "Disables the prompt for whether you are sure you want to demolish a building.":
+                        '禁用是否确定要拆除建筑物的提示。',
+                    "Shows and EXCLUSIVELY targets markers and invisible roads. With this and anarchy enabled you can demolish invisible roads, but SAVE FIRST! You cannot demolish invisible roads within buildings.":
+                        '同时启用这个和无碰撞时，您可以拆除不可见道路，但记得先保存游戏！您不能在建筑物内拆除不可见的道路。',
+                    "Makes the bulldozer EXCLUSIVELY target surfaces so you can remove them in one click. With Anarchy on you can bulldoze surfaces within buidings. You must turn this off to bulldoze anything else.":
+                        '启用无碰撞后，您可以在建筑物内使用推土机清理地面/表面。您必须关闭此选项以回归正常推土机功能。'
+                }
 
             ),
             建筑尺寸自定义: RE(
@@ -1612,10 +1651,10 @@ function replaceContent() {
                     'Brush Rotation': '笔刷角度'
             },
                 [MAIN.工具框.值], {
-                    'Custom 01.png': '自定义 01',
-                    'Mountain 01.png': '山脉 01',
-                    'Mountain 02.png': '山脉 02',
-                    'Mountain 03.png': '山脉 03',
+                    'Custom 01': '自定义 01',
+                    'Mountain 01': '山脉 01',
+                    'Mountain 02': '山脉 02',
+                    'Mountain 03': '山脉 03',
                     'Default Brush': '默认',
                     'Mountain02Brush': '山脉 02',
                     'TriangleBrush': '三角',
@@ -1638,6 +1677,47 @@ function replaceContent() {
                     'Assets.SUB_SERVICE_DESCRIPTION[Surfaces]':'一些地面/地表,无碰撞体积'
 
                 }
+            ),
+            扩展热键: RE(
+                [HOOKUI.顶栏.名称], {
+                    'ExtendedHotkeys':'扩展热键'
+            },
+                [HOOKUI.面板.标题], {
+                    'Extended Hotkeys':'扩展热键'
+            },
+                [HOOKUI.面板.头], {
+                    'General': '常规',
+                    'Mouse Wheel': '鼠标滚轮',
+                    'Hotkeys': '快捷键'
+            },
+                [HOOKUI.面板.头描述], {
+
+                    'Extended actions with your mouse wheel while in net tool placing roads.': '在网工具放置道路时，使用鼠标滚轮进行扩展操作。',
+                    'Awesome actions with your keyboard.': '使用键盘进行出色的操作。'
+                 },
+                [HOOKUI.面板.项目], {
+                    '升降步进卷轴': '高度阶段',
+                    '海拔重置':'高度重置',
+                    'Scroll elevation step level.': '高度阶段调整。',
+                    'Tool Modes': '工具模式',
+                    'Straight': '直线',
+                    'Curve': '曲线',
+                    'Complex Curve': '复杂曲线',
+                    'Continuous': '连续曲线',
+                    'Grid': '网格'
+                }
+            ),
+            扩展提示框: RE(
+                [HOOKUI.顶栏.名称], {
+                'ExtendedTooltip': '扩展提示框'
+            },
+                [HOOKUI.面板.标题], {
+                    'Extended Tooltip': '扩展提示框'
+            },
+            [HOOKUI.面板.项目], {
+                '无政府状态': '无碰撞状态',
+                '如果启用了无政府模式，则会显示一个指示器。':'如果启用了无碰撞，则会显示一个指示器。',
+                }
             )
         }
 
@@ -1652,7 +1732,7 @@ function replaceContent() {
         if (!document.getElementById('I18loginfo')) {
             let targetDiv = document.getElementsByClassName('fps-display_t30')[0]
             let infoDiv = document.createElement("div")
-            infoDiv.innerHTML = `全局汉化: ${window.__LOGGING__} 段字符 , 耗时 ${time2 - time1} ms ${addinfo}`
+            infoDiv.innerHTML = `全局汉化: ${window.__LOGGING__} 段字符 , 耗时 ${time2 - time1} ms`
             infoDiv.id = 'I18loginfo'
             infoDiv.style.fontFamily = "Noto Sans SC"
             targetDiv.appendChild(infoDiv);
