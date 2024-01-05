@@ -6,7 +6,7 @@
 * 树木控制器 Tree Controller
 * HookUI
 * 信息隐现 InfoLoom
-* 开发者模式 (部分)
+* 开发者模式 (部分) DEV mode
   * 顶栏
   * 模拟
   * 游戏玩法
@@ -28,6 +28,8 @@
 * 全部区块解锁 529 Tiles  
 * 无限刷子尺寸 Brush Size Unlimiter  
 * 额外景观工具 Extra Landscaping Tools  
+* 扩展提示框 Extended Tooltip
+* 扩展热键 Extended Hotkeys  
 更多汉化添加中...  
 
 ## 使用方法​  
