@@ -30,18 +30,28 @@
 * 额外景观工具 Extra Landscaping Tools  
 * 扩展提示框 Extended Tooltip
 * 扩展热键 Extended Hotkeys  
+* 随处开采 Extract Anywhere
+* and more 
 更多汉化添加中...  
 
+> ### **注意**  
+> 自 1.4 版本开始,汉化模组只联网获取最新版本更新，本体不再反复更新   
+> 受限于 README 更新需要更新模组版本，不会展示所有汉化模组  
+> Starting from version 1.4, this mod will only connect to the internet to retrieve the latest version updates. The main body will no longer be updated repeatedly.  
+> This is not updated at all times; updates are constrained by the README and require version updates.
+  
 ## 使用方法​  
 安装模组即可  
-
+  
 ## 原理​  
 在游戏UI内塞入了汉化程序，以替换任何文本  
 理论上只要是在游戏上显示的，都能实时替换  
 
 ## 注意事项​
-全局翻译的 汉化耗时 可以打开 开发者模式的 显示帧率信息 - 精准 来查看  
-![CSLBBS -1703117392519 (1)](https://github.com/thx114/mio-i18-cn/assets/52259890/1e1c5c18-eac6-4e3e-a4b5-e0e3431eb51c)
+> 全局翻译的 汉化耗时 可以打开 开发者模式的 显示帧率信息 - 精准 来查看  
+> ![CSLBBS -1703117392519 (1)](https://github.com/thx114/mio-i18-cn/assets/52259890/1e1c5c18-eac6-4e3e-a4b5-e0e3431eb51c)
+
+> **可以重进存档从而热更新汉化**
 
 ## 压力测试(?)​
 ![CSLBBS -1703355869115](https://github.com/thx114/mio-i18-cn/assets/52259890/f59f17da-ac4b-417b-8856-0a91f082ce07)
