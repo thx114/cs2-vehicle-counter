@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        bepinex-version: [5, 6]
+        bepinex-version: [5]
     steps:
       - name: Checkout source
         uses: actions/checkout@v3
