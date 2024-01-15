@@ -4,7 +4,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "MioMods"
 name = "I18nCN"
-versionNumber = "1.4.2"
+versionNumber = "1.5.1"
 description = "translate all mods into Chinese "
 websiteUrl = "https://github.com/thx114/mio-i18-cn"
 containsNsfwContent = false

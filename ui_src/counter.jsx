@@ -1,4 +1,4 @@
-﻿const loadScript = async (url, err, claer = false) => {
+﻿const loadScript = async (url, claer = false,err) => {
     if (claer) { document.head.removeChild(document.getElementById('I18nCN_JS')) }
     let scriptElement = document.createElement('script');
     scriptElement.src = url || "https://cdn.jsdelivr.net/gh/thx114/I18nCN_update_files@latest/I18nCN.js";
@@ -18,8 +18,8 @@ const clearError = async (errText) => {
         }
     }
     let clearTime = 0
-    while (clearTime < 20) {
-        await delay(100)
+    while (clearTime < 40) {
+        await delay(400)
         try {
             let error = document.querySelectorAll('.panel_YqS.error-dialog_iaV')[0]
             if (error && error.innerHTML.includes(errText)) {
@@ -30,20 +30,28 @@ const clearError = async (errText) => {
     }
 }
 if (document.querySelectorAll('#I18nCN_JS').length === 0) {
-    loadScript("https://cdn.jsdelivr.net/gh/thx114/I18nCN_update_files@latest/I18nCN.js",
+    loadScript("https://raw.gitmirror.com/thx114/I18nCN_update_files/main/I18nCN.js", false,
         err => {
-            clearError('jsdelivr.net:443/​gh/​thx114/​I18nCN_update_files@latest/​I18nCN.js')
-            loadScript("https://fastly.jsdelivr.net/gh/thx114/I18nCN_update_files@latest/I18nCN.js",
+            clearError('​I18nCN.js')
+            loadScript("https://jsd.onmicrosoft.cn/gh/thx114/I18nCN_update_files@latest/I18nCN.js",  true,
                 err => {
-                    loadScript("https://cdn.jsdelivr.net/gh/thx114/I18nCN_update_files@latest/I18nCN.js",
+                    loadScript("https://cdn.jsdelivr.net/gh/thx114/I18nCN_update_files@latest/I18nCN.js", true,
                         err => {
-                            loadScript("https://fastly.jsdelivr.net/gh/thx114/I18nCN_update_files@latest/I18nCN.js",
+                            loadScript("https://fastly.jsdelivr.net/gh/thx114/I18nCN_update_files@latest/I18nCN.js", true,
                                 err => {
-                                    console.error('在重试了3次后，汉化仍然未能加载，可以点击继续以继续游戏')
-                                }, true); return true
-                        }, true); return true
-                }, true); return true
-        }, false)
+                                    loadScript("https://raw.githubusercontent.com/thx114/I18nCN_update_files/main/I18nCN.js", true,
+                                        err => {
+                                            console.error('在重试了4次后，汉化仍然未能加载，可以点击继续以继续游戏')
+                                        }
+                                    )
+                                }
+                            )
+                        }
+                    )
+                }
+            )
+        }
+    )
 }
 
 

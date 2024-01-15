@@ -31,7 +31,8 @@
 * 扩展提示框 Extended Tooltip
 * 扩展热键 Extended Hotkeys  
 * 随处开采 Extract Anywhere
-* and more 
+* 交通自定义 CityPlayer Traffic Custom Mod
+* 调整UI Tweak UI
 更多汉化添加中...  
 
 > ### **注意**  
@@ -48,10 +49,8 @@
 理论上只要是在游戏上显示的，都能实时替换  
 
 ## 注意事项​
-> 全局翻译的 汉化耗时 可以打开 开发者模式的 显示帧率信息 - 精准 来查看  
+> 全局翻译的 汉化耗时 可以打开 开发者模式的 显示帧率信息 来查看  
 > ![CSLBBS -1703117392519 (1)](https://github.com/thx114/mio-i18-cn/assets/52259890/1e1c5c18-eac6-4e3e-a4b5-e0e3431eb51c)
-
-> **可以重进存档从而热更新汉化**
 
 ## 压力测试(?)​
 ![CSLBBS -1703355869115](https://github.com/thx114/mio-i18-cn/assets/52259890/f59f17da-ac4b-417b-8856-0a91f082ce07)
