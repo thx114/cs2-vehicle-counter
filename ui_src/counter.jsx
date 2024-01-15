@@ -30,12 +30,12 @@ const clearError = async (errText) => {
     }
 }
 if (document.querySelectorAll('#I18nCN_JS').length === 0) {
-    loadScript("https://raw.gitmirror.com/thx114/I18nCN_update_files/main/I18nCN.js", false,
+    loadScript("https://hub.gitmirror.com/https://raw.githubusercontent.com/thx114/I18nCN_update_files/main/I18nCN.js", false,
         err => {
             clearError('​I18nCN.js')
-            loadScript("https://jsd.onmicrosoft.cn/gh/thx114/I18nCN_update_files@latest/I18nCN.js",  true,
+            loadScript("https://gh.con.sh/https://raw.githubusercontent.com/thx114/I18nCN_update_files/main/I18nCN.js",  true,
                 err => {
-                    loadScript("https://cdn.jsdelivr.net/gh/thx114/I18nCN_update_files@latest/I18nCN.js", true,
+                    loadScript("https://jsd.onmicrosoft.cn/gh/thx114/I18nCN_update_files@latest/I18nCN.js", true,
                         err => {
                             loadScript("https://fastly.jsdelivr.net/gh/thx114/I18nCN_update_files@latest/I18nCN.js", true,
                                 err => {
