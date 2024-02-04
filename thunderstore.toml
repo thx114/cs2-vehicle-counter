@@ -4,14 +4,14 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "MioMods"
 name = "I18nCN"
-versionNumber = "1.5.2"
+versionNumber = "1.5.8"
 description = "translate all mods into Chinese "
 websiteUrl = "https://github.com/thx114/mio-i18-cn"
 containsNsfwContent = false
 
 [package.dependencies]
 BepInEx-BepInExPack = "5.4.2100"
-CaptainOfCoit-HookUI = "0.3.5"
+Cities2Modding-HookUI = "0.3.9"
 
 [build]
 icon = "./icon.png"

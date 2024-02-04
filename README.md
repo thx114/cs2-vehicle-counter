@@ -33,6 +33,10 @@
 * 随处开采 Extract Anywhere
 * 交通自定义 CityPlayer Traffic Custom Mod
 * 调整UI Tweak UI
+* 水景工具 Water Features
+* 更好的推土机 Better Bulldozer
+* 额外景观工具扩展-地面 ELT-Surfaces
+* 终极监视器 Ultimate Monitor
 更多汉化添加中...  
 
 > ### **注意**  
